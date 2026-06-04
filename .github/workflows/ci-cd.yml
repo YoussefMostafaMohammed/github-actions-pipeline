@@ -48,7 +48,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}
+            ghcr.io/youssefmostafamohammed/github-actions-pipeline:latest
+            ghcr.io/youssefmostafamohammed/github-actions-pipeline:${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
