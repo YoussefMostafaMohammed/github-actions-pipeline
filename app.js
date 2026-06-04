@@ -8,9 +8,11 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', time: new Date().toISOString() });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server rupackage.json:
-nning on port ${PORT}`);
-});
+// Only start server if not in test mode
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
 module.exports = app;
